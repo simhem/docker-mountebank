@@ -4,7 +4,7 @@ RUN apk --no-cache add curl
 
 COPY entry_point.sh /opt/bin/entry_point.sh
 
-RUN dos2unix /opt/bin/entry_point.sh
-RUN chmod +X /opt/bin/entry_point.sh
+#RUN dos2unix /opt/bin/entry_point.sh
+RUN sudo chmod +X /opt/bin/entry_point.sh
 
 ENTRYPOINT ["/opt/bin/entry_point.sh"]
