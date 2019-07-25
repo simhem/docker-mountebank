@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ -z "$URL_EJS" ]; then
-    mb
+    mb --allowInjection
 else
     mkdir /imposters
     curl -g -k $URL_EJS > /imposters/imposters.ejs
-    mb --configfile /imposters/imposters.ejs 
+    mb --allowInjection --configfile /imposters/imposters.ejs 
 fi
